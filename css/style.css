@@ -1,0 +1,527 @@
+/* Reset Básico & Variáveis */
+:root {
+    /* Paleta Cloud Computing */
+    --primary-blue: #3498db;       /* Azul claro/médio - cor principal */
+    --primary-blue-darker: #2980b9; /* Azul mais escuro para hover/ênfase */
+    --secondary-grey: #95a5a6;    /* Cinza médio para texto secundário/bordas suaves */
+    --light-bg-accent: #ecf0f1;    /* Cinza muito claro / quase branco azulado para fundos */
+    --light-grey-border: #dce4e8;  /* Borda um pouco mais visível que o fundo claro */
+    --dark-text-color: #2c3e50;    /* Cinza bem escuro / azul marinho para texto principal */
+    --white-color: #ffffff;
+    --cta-color: #1abc9c;          /* Verde-azulado (Turquesa/Teal) para CTAs principais */
+    --cta-darker: #16a085;        /* Versão mais escura do CTA para hover */
+
+    /* Estilos Gerais */
+    --card-shadow: 0 4px 10px rgba(44, 62, 80, 0.1); /* Sombra suave baseada no dark-text */
+    --border-radius: 6px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text-color);
+    background-color: var(--white-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--white-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-grey-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(44, 62, 80, 0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark-text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-text-color);
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500; /* Levemente mais forte */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--primary-blue);
+    color: var(--white-color);
+}
+
+.slogan {
+    font-style: italic;
+    color: var(--secondary-grey);
+    margin-top: 5px;
+    text-align: right;
+    flex-basis: 100%;
+    display: none; /* Escondido por padrão, aparece em telas menores via media query */
+}
+
+/* Main Content */
+main {
+    /* Removido padding geral para controlar por seção */
+}
+
+section {
+    padding: 60px 0; /* Padding padrão para seções */
+    overflow: hidden; /* Previne problemas com margens/paddings */
+}
+
+/* Fundo alternado suave */
+section:nth-child(even) {
+    background-color: var(--light-bg-accent);
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 20px;
+    color: var(--dark-text-color);
+    font-weight: 600; /* Títulos um pouco mais fortes */
+}
+
+h1 {
+    font-size: 2.5rem; /* Ajustado no Hero */
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px; /* Mais espaço abaixo do H2 */
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--primary-blue); /* Títulos dos cards em azul */
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #55606a; /* Tom de cinza um pouco mais suave para parágrafos */
+}
+
+/* Hero Section (Index) */
+.hero {
+    text-align: center;
+    padding: 80px 20px; /* Padding aumentado */
+    position: relative;
+    background-color: var(--primary-blue-darker); /* Cor de fallback */
+    background-image: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.4)), /* Overlay escuro */
+                      url('../images/cloud_background.jpg'); /* Caminho para a imagem */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* Removida border-bottom daqui para não cortar a imagem bruscamente */
+    /* background-color: var(--light-bg-accent); */ /* Removido fundo claro */
+}
+
+/* Ajusta a cor do texto para ter bom contraste com o fundo (imagem + overlay) */
+.hero h1,
+.hero p {
+    color: var(--white-color); /* Texto branco */
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra para legibilidade */
+}
+
+.hero h1 {
+    font-size: 2rem; /* Título maior */
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 15px; /* Espaçamento entre parágrafos */
+}
+/* Remove padding padrão da seção hero para o padding interno funcionar melhor */
+main section.hero {
+    padding: 0;
+}
+
+
+/* Product Cards Section (Index) */
+.produtos {
+     /* Garante fundo consistente se for seção par/ímpar */
+     background-color: var(--white-color); /* Garante fundo branco */
+     padding-top: 20px;
+     padding-bottom: 20px;
+}
+
+.produtos h2 {
+    margin-top: 0; /* Remove margem extra se for a primeira seção */
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px; /* Aumentado espaço acima dos cards */
+}
+
+.card {
+    background-color: var(--white-color);
+    border: 1px solid var(--light-grey-border);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(44, 62, 80, 0.12);
+}
+
+.card img.card-logo {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn, .btn-comprar, button[type="submit"] {
+    display: inline-block;
+    color: var(--white-color);
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Botão Padrão (Ver Simulados) */
+.btn {
+    background-color: var(--primary-blue);
+}
+.btn:hover {
+    background-color: var(--primary-blue-darker);
+    transform: scale(1.03);
+}
+
+/* Botão Comprar (CTA Principal) */
+.btn-comprar {
+    background-color: var(--cta-color);
+}
+.btn-comprar:hover {
+    background-color: var(--cta-darker);
+    transform: scale(1.03);
+}
+
+/* Page Titles (AWS, Azure, Google, Contato) */
+.page-title {
+    background-color: var(--primary-blue);
+    color: var(--white-color);
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-blue-darker);
+    margin-bottom: 40px; /* Espaço abaixo do título da página */
+}
+
+.page-title h1 {
+    color: var(--white-color);
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 2.2rem; /* Tamanho consistente para títulos de página */
+}
+/* Remove padding padrão da seção page-title */
+main section.page-title {
+    padding: 0;
+    margin-bottom: 0; /* Controla espaço na seção seguinte */
+}
+
+/* Intro Produto (AWS, Azure, Google) */
+.intro-produto {
+    padding-top: 40px;
+    padding-bottom: 20px; /* Menos espaço abaixo */
+}
+.intro-produto p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+}
+
+/* Certification Cards Section (AWS, Azure, Google) */
+.certificacoes {
+     background-color: var(--light-bg-accent); /* Garante o fundo claro */
+     padding-top: 40px;
+     padding-bottom: 60px;
+}
+.certificacoes h2 {
+    margin-bottom: 30px;
+}
+
+.certification-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cert-card {
+    background-color: var(--white-color);
+    border: 1px solid var(--light-grey-border);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cert-card:hover {
+     transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(44, 62, 80, 0.12);
+}
+
+.cert-card h4 {
+    margin-bottom: 10px;
+    color: var(--dark-text-color); /* Título da certificação mais escuro */
+    font-size: 1.1rem; /* Levemente menor */
+}
+
+.cert-card p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    font-size: 0.95rem; /* Texto do card um pouco menor */
+}
+
+/* Contact Page Sections */
+.contato-info {
+     padding-bottom: 0; /* Remove padding inferior */
+}
+.contato-info p {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.contato-form {
+     background-color: var(--light-bg-accent); /* Fundo claro na seção do form */
+     padding-top: 40px;
+     padding-bottom: 60px;
+}
+
+.contato-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white-color); /* Fundo branco para o formulário */
+    padding: 35px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--light-grey-border);
+}
+
+.contato-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-text-color);
+}
+
+.contato-form input[type="text"],
+.contato-form input[type="email"],
+.contato-form input[type="tel"],
+.contato-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--light-grey-border);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contato-form input:focus,
+.contato-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.contato-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contato-form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    background-color: var(--cta-color); /* Botão de envio com cor CTA */
+}
+.contato-form button[type="submit"]:hover {
+     background-color: var(--cta-darker);
+     transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text-color); /* Fundo escuro */
+    color: var(--light-bg-accent); /* Texto claro */
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 0; /* Removido margin-top, controlado pelo padding da última seção */
+    border-top: 3px solid var(--primary-blue); /* Linha azul no topo do footer */
+}
+
+footer p {
+    margin-bottom: 0;
+    color: var(--secondary-grey); /* Texto do copyright em cinza médio */
+}
+
+/* Media Queries (Ajustes de Responsividade) */
+@media (max-width: 992px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    .hero h1 { font-size: 2.5rem; } /* Ajuste no Hero */
+    .hero p { font-size: 1.1rem; }
+    .container { padding: 0 15px; }
+}
+
+@media (max-width: 768px) {
+    section { padding: 40px 0; } /* Menos padding em telas menores */
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav { width: 100%; } /* Faz nav ocupar largura */
+    nav ul {
+        margin-top: 15px;
+        padding-left: 0;
+        width: 100%;
+        justify-content: space-between; /* Espalha itens */
+    }
+     nav ul li {
+        margin-left: 0;
+        margin-right: 5px; /* Espaço menor entre itens */
+    }
+    .slogan {
+        text-align: left;
+        margin-top: 10px;
+        display: block; /* Mostra slogan */
+    }
+
+    .hero { padding: 60px 15px; } /* Menos padding no hero */
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+    .certification-cards {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+
+    .page-title h1 { font-size: 1.8rem; }
+    .contato-form form { padding: 25px; }
+    footer { padding: 20px 0; }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+
+    nav ul {
+        flex-wrap: wrap; /* Permite quebrar linha se necessário */
+        justify-content: flex-start;
+    }
+    nav ul li {
+        margin-bottom: 5px; /* Espaço se quebrar linha */
+        margin-right: 10px;
+    }
+    nav ul li a {
+        padding: 5px 8px; /* Menor padding no link */
+        font-size: 0.9rem;
+    }
+
+    .logo a { font-size: 1.3rem; }
+    .logo img { height: 30px; }
+
+    .hero { padding: 50px 15px; }
+    .hero h1 { font-size: 1.9rem; }
+    .hero p { font-size: 0.95rem; line-height: 1.6; }
+
+    .page-title h1 { font-size: 1.6rem; }
+
+    .btn, .btn-comprar, button[type="submit"] {
+        padding: 10px 15px; /* Botões menores */
+        font-size: 0.9rem;
+    }
+    .contato-form form { padding: 20px; }
+    .contato-form input, .contato-form textarea { padding: 10px; }
+}
