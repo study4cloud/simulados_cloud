@@ -33,6 +33,7 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+    align-content: center;
 }
 
 /* Header */
@@ -354,7 +355,8 @@ main section.page-title {
 
 /* Contact Page Sections */
 .contato-info {
-     padding-bottom: 0; /* Remove padding inferior */
+     padding-bottom: 10; /* Remove padding inferior */
+     text-align: center;
 }
 .contato-info p {
     text-align: center;
