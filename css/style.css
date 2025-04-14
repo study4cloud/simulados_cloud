@@ -345,12 +345,14 @@ main section.page-title {
     margin-bottom: 10px;
     color: var(--dark-text-color); /* Título da certificação mais escuro */
     font-size: 1.1rem; /* Levemente menor */
+    text-align: center;
 }
 
 .cert-card p {
     flex-grow: 1;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     font-size: 0.95rem; /* Texto do card um pouco menor */
+    text-align: center;
 }
 
 /* Contact Page Sections */
