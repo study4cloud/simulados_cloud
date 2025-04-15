@@ -151,18 +151,26 @@ p {
 
 /* Hero Section (Index) */
 .hero {
-    text-align: center;
-    padding: 80px 20px; /* Padding aumentado */
     position: relative;
-    background-color: var(--primary-blue-darker); /* Cor de fallback */
-    background-image: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.4)), /* Overlay escuro */
-                      url('../images/cloud_background.jpg'); /* Caminho para a imagem */
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cloud_background.jpg');
     background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
-    /* Removida border-bottom daqui para não cortar a imagem bruscamente */
-    /* background-color: var(--light-bg-accent); */ /* Removido fundo claro */
+    background-position: center center;
+
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(40px, 10vw, 100px) clamp(16px, 5vw, 80px);
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
 }
+
+
+
 
 /* Ajusta a cor do texto para ter bom contraste com o fundo (imagem + overlay) */
 .hero h1,
@@ -312,8 +320,8 @@ main section.page-title {
 /* Certification Cards Section (AWS, Azure, Google) */
 .certificacoes {
      background-color: var(--light-bg-accent); /* Garante o fundo claro */
-     padding-top: 40px;
-     padding-bottom: 60px;
+     padding-top: 20px;
+     padding-bottom: 40px;
 }
 .certificacoes h2 {
     margin-bottom: 30px;
@@ -335,6 +343,7 @@ main section.page-title {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* align-items: center; */
 }
 .cert-card:hover {
      transform: translateY(-5px);
@@ -355,6 +364,20 @@ main section.page-title {
     text-align: center;
 }
 
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* opcional: defina uma altura se quiser controlar o espaço */
+}
+
+.badge img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain; /* ou "cover", dependendo do visual desejado */
+    display: block;
+    margin: 0 auto; /* centraliza horizontalmente */
+  }
 /* Contact Page Sections */
 .contato-info {
      padding-bottom: 10; /* Remove padding inferior */
@@ -528,4 +551,72 @@ footer p {
     }
     .contato-form form { padding: 20px; }
     .contato-form input, .contato-form textarea { padding: 10px; }
+}
+
+/* === MELHORIAS MODERNAS DE RESPONSIVIDADE (SAFE PATCH) === */
+
+/* Garante que imagens e vídeos não estourem os contêineres */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tipografia fluida para títulos */
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+/* Padding inteligente para seções */
+section {
+    padding-left: clamp(16px, 5vw, 40px);
+    padding-right: clamp(16px, 5vw, 40px);
+}
+
+/* Ajuste fino para containers com muito conteúdo */
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow-wrap: break-word;
+}
+
+/* Evita quebra feia em botões ou links grandes */
+a, button {
+    word-break: break-word;
+}
+
+/* Seção de formulário com responsividade suave */
+.contato-form form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Evita overflows horizontais em qualquer situação */
+body {
+    overflow-x: hidden;
+}
+
+/* Ajuste geral em colunas flex/grid para pequenas telas */
+@media (max-width: 480px) {
+    .product-cards,
+    .certification-cards {
+        gap: 20px;
+    }
+
+    .card,
+    .cert-card {
+        padding: 20px;
+    }
+
+    .btn,
+    .btn-comprar,
+    button[type="submit"] {
+        width: 100%;
+    }
 }
