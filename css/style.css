@@ -412,20 +412,20 @@ main section.page-title {
   }
 /* Contact Page Sections */
 .contato-info {
-     padding-bottom: 10; /* Remove padding inferior */
+     padding-bottom: 1px; /* Remove padding inferior */
      text-align: center;
 }
 .contato-info p {
     text-align: center;
     font-size: 1.1rem;
     max-width: 700px;
-    margin: 0 auto 30px auto;
+    margin: 30px auto 30px auto;
 }
 
 .contato-form {
      background-color: var(--light-bg-accent); /* Fundo claro na seção do form */
-     padding-top: 40px;
-     padding-bottom: 60px;
+     padding-top: 10px;
+     padding-bottom: 20px;
 }
 
 .contato-form form {
@@ -583,6 +583,10 @@ footer p {
     }
     .contato-form form { padding: 20px; }
     .contato-form input, .contato-form textarea { padding: 10px; }
+    .email {
+        font-size: 36px; 
+        font-style: italic;
+    }
 }
 
 /* === MELHORIAS MODERNAS DE RESPONSIVIDADE (SAFE PATCH) === */
