@@ -34,19 +34,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const titulo = titulos[tituloIndex].textContent.trim();
     const valor = isPacote1 ? valorPacote1 : valorPacote2;
     const pacote = isPacote1 ? "1" : "2";
+    const quantidade = isPacote1 ? "5" : "10";
 
-    const mensagem = `Quero o Pacote ${pacote}<br>${isPacote1 ? "5" : "10"} Simulados - R$ ${valor}`;
+    const mensagem = `Quero o Pacote ${pacote}<br>${quantidade} Simulados - R$ ${valor}`;
     link.innerHTML = mensagem;
 
-    // Chama a função do Netlify para gerar o link seguro
-    fetch(`/.netlify/functions/getWhatsappLink?pacote=${pacote}&titulo=${encodeURIComponent(titulo)}`)
-      .then(res => res.json())
-      .then(data => {
-        link.href = data.link;
-      })
-      .catch(() => {
-        link.href = "#"; // fallback caso falhe
-      });
+    // redireciona para função do Netlify que protege o número
+    const url = `/.netlify/functions/getWhatsappLink?pacote=${pacote}&titulo=${encodeURIComponent(titulo)}`;
+    link.href = url;
   });
 });
 
