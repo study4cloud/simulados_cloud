@@ -26,4 +26,4 @@ fetch(`/.netlify/functions/getWhatsappLink?pacote=${pacote}&titulo=${encodeURICo
   .then(res => res.json())
   .then(data => {
     link.href = data.link;
-  });  
+  });
