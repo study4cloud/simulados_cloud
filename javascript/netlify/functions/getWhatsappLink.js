@@ -1,5 +1,5 @@
 exports.handler = async (event) => {
-    const phoneNumber = "SEU_NUMERO_AQUI"; // coloque aqui o número SEM DDD ou com código do país, ex: 5511912345678
+    const phoneNumber = "5511995555313"; // coloque aqui o número SEM DDD ou com código do país, ex: 5511912345678
   
     const pacote = event.queryStringParameters.pacote || "1";
     const titulo = event.queryStringParameters.titulo || "Simulado";
