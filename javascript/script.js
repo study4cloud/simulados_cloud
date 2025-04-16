@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('.wa-link');
   const titulos = document.querySelectorAll('.whatsapp-message');
-  const valorPacote1 = "21,00";
-  const valorPacote2 = "28,00";
+  const valorPacote1 = "20,00";
+  const valorPacote2 = "25,00";
 
   links.forEach((link, index) => {
     const isPacote1 = index % 2 === 0;
