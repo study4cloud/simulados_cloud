@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const phoneNumber = "5511995555313";  
+    // const phoneNumber = "5511995555313"; 
     const links = document.querySelectorAll('.wa-link');
     const titulos = document.querySelectorAll('.whatsapp-message');
     const valorPacote1 = "20,00";
@@ -17,7 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
       const mensagemWhatsapp = `Quero o Pacote ${pacote} - ${isPacote1 ? "5" : "10"} Simulados - ${titulo}`
   
       link.innerHTML = mensagem;
-      link.href = `https://wa.me/${phoneNumber}?text=${mensagemWhatsapp}`;
+      // link.href = `https://wa.me/${phoneNumber}?text=${mensagemWhatsapp}`;
+      link.href = `https://bit.ly/4iojbyJ`;
     });    
   });
 
