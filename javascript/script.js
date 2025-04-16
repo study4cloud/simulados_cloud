@@ -38,11 +38,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const mensagem = `Quero o Pacote ${pacote}<br>${quantidade} Simulados - R$ ${valor}`;
     link.innerHTML = mensagem;
-    console.log(mensagem);
-    console.log(titulo);
 
     // redireciona para função do Netlify que protege o número
-    const url = `/.netlify/functions/getWhatsappLink?pacote=${pacote}&titulo=${encodeURIComponent(mensagem)}`;
+    const url = `/.netlify/functions/getWhatsappLink?pacote=${pacote}&titulo=${encodeURIComponent(titulo)}`;
     link.href = url;
   });
 });
