@@ -1,18 +1,27 @@
 /* Reset Básico & Variáveis */
 :root {
     /* Paleta Cloud Computing */
-    --primary-blue: #3498db;       /* Azul claro/médio - cor principal */
-    --primary-blue-darker: #2980b9; /* Azul mais escuro para hover/ênfase */
-    --secondary-grey: #95a5a6;    /* Cinza médio para texto secundário/bordas suaves */
-    --light-bg-accent: #ecf0f1;    /* Cinza muito claro / quase branco azulado para fundos */
-    --light-grey-border: #dce4e8;  /* Borda um pouco mais visível que o fundo claro */
-    --dark-text-color: #2c3e50;    /* Cinza bem escuro / azul marinho para texto principal */
+    --primary-blue: #3498db;
+    /* Azul claro/médio - cor principal */
+    --primary-blue-darker: #2980b9;
+    /* Azul mais escuro para hover/ênfase */
+    --secondary-grey: #95a5a6;
+    /* Cinza médio para texto secundário/bordas suaves */
+    --light-bg-accent: #ecf0f1;
+    /* Cinza muito claro / quase branco azulado para fundos */
+    --light-grey-border: #dce4e8;
+    /* Borda um pouco mais visível que o fundo claro */
+    --dark-text-color: #2c3e50;
+    /* Cinza bem escuro / azul marinho para texto principal */
     --white-color: #ffffff;
-    --cta-color: #1abc9c;          /* Verde-azulado (Turquesa/Teal) para CTAs principais */
-    --cta-darker: #16a085;        /* Versão mais escura do CTA para hover */
+    --cta-color: #1abc9c;
+    /* Verde-azulado (Turquesa/Teal) para CTAs principais */
+    --cta-darker: #16a085;
+    /* Versão mais escura do CTA para hover */
 
     /* Estilos Gerais */
-    --card-shadow: 0 4px 10px rgba(44, 62, 80, 0.1); /* Sombra suave baseada no dark-text */
+    --card-shadow: 0 4px 10px rgba(44, 62, 80, 0.1);
+    /* Sombra suave baseada no dark-text */
     --border-radius: 6px;
 }
 
@@ -85,7 +94,8 @@ nav ul li a {
     padding: 5px 10px;
     border-radius: var(--border-radius);
     transition: background-color 0.3s ease, color 0.3s ease;
-    font-weight: 500; /* Levemente mais forte */
+    font-weight: 500;
+    /* Levemente mais forte */
 }
 
 nav ul li a:hover,
@@ -100,7 +110,8 @@ nav ul li a.active {
     margin-top: 5px;
     text-align: right;
     flex-basis: 100%;
-    display: none; /* Escondido por padrão, aparece em telas menores via media query */
+    display: none;
+    /* Escondido por padrão, aparece em telas menores via media query */
 }
 
 /* Main Content */
@@ -109,8 +120,10 @@ main {
 }
 
 section {
-    padding: 60px 0; /* Padding padrão para seções */
-    overflow: hidden; /* Previne problemas com margens/paddings */
+    padding: 60px 0;
+    /* Padding padrão para seções */
+    overflow: hidden;
+    /* Previne problemas com margens/paddings */
 }
 
 /* Fundo alternado suave */
@@ -118,26 +131,33 @@ section:nth-child(even) {
     background-color: var(--light-bg-accent);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin-bottom: 20px;
     color: var(--dark-text-color);
-    font-weight: 600; /* Títulos um pouco mais fortes */
+    font-weight: 600;
+    /* Títulos um pouco mais fortes */
 }
 
 h1 {
-    font-size: 2.5rem; /* Ajustado no Hero */
+    font-size: 2.5rem;
+    /* Ajustado no Hero */
     text-align: center;
 }
 
 h2 {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 40px; /* Mais espaço abaixo do H2 */
+    margin-bottom: 40px;
+    /* Mais espaço abaixo do H2 */
 }
 
 h3 {
     font-size: 1.5rem;
-    color: var(--primary-blue); /* Títulos dos cards em azul */
+    color: var(--primary-blue);
+    /* Títulos dos cards em azul */
 }
 
 h4 {
@@ -146,7 +166,8 @@ h4 {
 
 p {
     margin-bottom: 15px;
-    color: #55606a; /* Tom de cinza um pouco mais suave para parágrafos */
+    color: #55606a;
+    /* Tom de cinza um pouco mais suave para parágrafos */
 }
 
 /* Hero Section (Index) */
@@ -157,7 +178,6 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -173,13 +193,15 @@ p {
     display: none;
     position: fixed;
     z-index: 999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6);
-  }
-  
-  .modal-content {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
     background-color: #fff;
     margin: 10% auto;
     padding: 20px;
@@ -187,34 +209,36 @@ p {
     width: 90%;
     max-width: 600px;
     position: relative;
-  }
-  
-  .close {
+}
+
+.close {
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    top: 10px; right: 20px;
+    top: 10px;
+    right: 20px;
     cursor: pointer;
-  }
-  
-  .close:hover {
-    color: #000;
-  }
-  
+}
 
+.close:hover {
+    color: #000;
+}
 
 /* Ajusta a cor do texto para ter bom contraste com o fundo (imagem + overlay) */
 .hero h1,
 .hero p {
-    color: var(--white-color); /* Texto branco */
+    color: var(--white-color);
+    /* Texto branco */
     position: relative;
     z-index: 2;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra para legibilidade */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    /* Sombra para legibilidade */
 }
 
 .hero h1 {
-    font-size: 2rem; /* Título maior */
+    font-size: 2rem;
+    /* Título maior */
     margin-bottom: 25px;
 }
 
@@ -224,24 +248,27 @@ p {
     margin-right: auto;
     font-size: 1.3rem;
     line-height: 1.7;
-    margin-bottom: 15px; /* Espaçamento entre parágrafos */
+    margin-bottom: 15px;
+    /* Espaçamento entre parágrafos */
 }
+
 /* Remove padding padrão da seção hero para o padding interno funcionar melhor */
 main section.hero {
     padding: 0;
 }
 
-
 /* Product Cards Section (Index) */
 .produtos {
-     /* Garante fundo consistente se for seção par/ímpar */
-     background-color: var(--white-color); /* Garante fundo branco */
-     padding-top: 20px;
-     padding-bottom: 20px;
+    /* Garante fundo consistente se for seção par/ímpar */
+    background-color: var(--white-color);
+    /* Garante fundo branco */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .produtos h2 {
-    margin-top: 0; /* Remove margem extra se for a primeira seção */
+    margin-top: 0;
+    /* Remove margem extra se for a primeira seção */
 }
 
 .product-cards {
@@ -249,7 +276,8 @@ main section.hero {
     justify-content: space-around;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 30px; /* Aumentado espaço acima dos cards */
+    margin-top: 30px;
+    /* Aumentado espaço acima dos cards */
 }
 
 .card {
@@ -281,7 +309,9 @@ main section.hero {
 }
 
 /* Buttons */
-.btn, .btn-comprar, button[type="submit"] {
+.btn,
+.btn-comprar,
+button[type="submit"] {
     display: inline-block;
     color: var(--white-color);
     padding: 12px 25px;
@@ -300,6 +330,7 @@ main section.hero {
 .btn {
     background-color: var(--primary-blue);
 }
+
 .btn:hover {
     background-color: var(--primary-blue-darker);
     transform: scale(1.03);
@@ -309,6 +340,7 @@ main section.hero {
 .btn-comprar {
     background-color: var(--cta-color);
 }
+
 .btn-comprar:hover {
     background-color: var(--cta-darker);
     transform: scale(1.03);
@@ -321,26 +353,32 @@ main section.hero {
     padding: 25px 0;
     text-align: center;
     border-bottom: 3px solid var(--primary-blue-darker);
-    margin-bottom: 40px; /* Espaço abaixo do título da página */
+    margin-bottom: 40px;
+    /* Espaço abaixo do título da página */
 }
 
 .page-title h1 {
     color: var(--white-color);
     margin-bottom: 0;
     font-weight: 600;
-    font-size: 2.2rem; /* Tamanho consistente para títulos de página */
+    font-size: 2.2rem;
+    /* Tamanho consistente para títulos de página */
 }
+
 /* Remove padding padrão da seção page-title */
 main section.page-title {
     padding: 0;
-    margin-bottom: 0; /* Controla espaço na seção seguinte */
+    margin-bottom: 0;
+    /* Controla espaço na seção seguinte */
 }
 
 /* Intro Produto (AWS, Azure, Google) */
 .intro-produto {
     padding-top: 40px;
-    padding-bottom: 20px; /* Menos espaço abaixo */
+    padding-bottom: 20px;
+    /* Menos espaço abaixo */
 }
+
 .intro-produto p {
     text-align: center;
     max-width: 800px;
@@ -351,10 +389,12 @@ main section.page-title {
 
 /* Certification Cards Section (AWS, Azure, Google) */
 .certificacoes {
-     background-color: var(--light-bg-accent); /* Garante o fundo claro */
-     padding-top: 20px;
-     padding-bottom: 40px;
+    background-color: var(--light-bg-accent);
+    /* Garante o fundo claro */
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
+
 .certificacoes h2 {
     margin-bottom: 30px;
 }
@@ -375,24 +415,29 @@ main section.page-title {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* align-items: center; */
+    /* align-items: center;
+    */
 }
+
 .cert-card:hover {
-     transform: translateY(-5px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(44, 62, 80, 0.12);
 }
 
 .cert-card h4 {
     margin-bottom: 10px;
-    color: var(--dark-text-color); /* Título da certificação mais escuro */
-    font-size: 1.1rem; /* Levemente menor */
+    color: var(--dark-text-color);
+    /* Título da certificação mais escuro */
+    font-size: 1.1rem;
+    /* Levemente menor */
     text-align: center;
 }
 
 .cert-card p {
     flex-grow: 1;
     margin-bottom: 2px;
-    font-size: 0.95rem; /* Texto do card um pouco menor */
+    font-size: 0.95rem;
+    /* Texto do card um pouco menor */
     text-align: center;
 }
 
@@ -400,21 +445,27 @@ main section.page-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px; /* opcional: defina uma altura se quiser controlar o espaço */
+    height: 150px;
+    /* opcional: defina uma altura se quiser controlar o espaço */
 }
 
 .badge img {
     width: 150px;
     height: 150px;
-    object-fit: contain; /* ou "cover", dependendo do visual desejado */
+    object-fit: contain;
+    /* ou "cover", dependendo do visual desejado */
     display: block;
-    margin: 0 auto; /* centraliza horizontalmente */
-  }
+    margin: 0 auto;
+    /* centraliza horizontalmente */
+}
+
 /* Contact Page Sections */
 .contato-info {
-     padding-bottom: 1px; /* Remove padding inferior */
-     text-align: center;
+    padding-bottom: 1px;
+    /* Remove padding inferior */
+    text-align: center;
 }
+
 .contato-info p {
     text-align: center;
     font-size: 1.1rem;
@@ -423,15 +474,17 @@ main section.page-title {
 }
 
 .contato-form {
-     background-color: var(--light-bg-accent); /* Fundo claro na seção do form */
-     padding-top: 10px;
-     padding-bottom: 20px;
+    background-color: var(--light-bg-accent);
+    /* Fundo claro na seção do form */
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .contato-form form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: var(--white-color); /* Fundo branco para o formulário */
+    background-color: var(--white-color);
+    /* Fundo branco para o formulário */
     padding: 35px;
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
@@ -459,6 +512,7 @@ main section.page-title {
     background-color: #f8f9fa;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .contato-form input:focus,
 .contato-form textarea:focus {
     outline: none;
@@ -475,124 +529,221 @@ main section.page-title {
     width: 100%;
     padding: 15px;
     font-size: 1.1rem;
-    background-color: var(--cta-color); /* Botão de envio com cor CTA */
+    background-color: var(--cta-color);
+    /* Botão de envio com cor CTA */
 }
+
 .contato-form button[type="submit"]:hover {
-     background-color: var(--cta-darker);
-     transform: scale(1.02);
+    background-color: var(--cta-darker);
+    transform: scale(1.02);
 }
 
 /* Footer */
 footer {
-    background-color: var(--dark-text-color); /* Fundo escuro */
-    color: var(--light-bg-accent); /* Texto claro */
+    background-color: var(--dark-text-color);
+    /* Fundo escuro */
+    color: var(--light-bg-accent);
+    /* Texto claro */
     text-align: center;
     padding: 25px 0;
-    margin-top: 0; /* Removido margin-top, controlado pelo padding da última seção */
-    border-top: 3px solid var(--primary-blue); /* Linha azul no topo do footer */
+    margin-top: 0;
+    /* Removido margin-top, controlado pelo padding da última seção */
+    border-top: 3px solid var(--primary-blue);
+    /* Linha azul no topo do footer */
 }
 
 footer p {
     margin-bottom: 0;
-    color: var(--secondary-grey); /* Texto do copyright em cinza médio */
+    color: var(--secondary-grey);
+    /* Texto do copyright em cinza médio */
 }
 
 /* Media Queries (Ajustes de Responsividade) */
 @media (max-width: 992px) {
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.8rem; }
-    .hero h1 { font-size: 2.5rem; } /* Ajuste no Hero */
-    .hero p { font-size: 1.1rem; }
-    .container { padding: 0 15px; }
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Ajuste no Hero */
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
 }
 
 @media (max-width: 768px) {
-    section { padding: 40px 0; } /* Menos padding em telas menores */
+    section {
+        padding: 40px 0;
+    }
+
+    /* Menos padding em telas menores */
 
     header .container {
         flex-direction: column;
         align-items: flex-start;
     }
-    nav { width: 100%; } /* Faz nav ocupar largura */
+
+    nav {
+        width: 100%;
+    }
+
+    /* Faz nav ocupar largura */
     nav ul {
         margin-top: 15px;
         padding-left: 0;
         width: 100%;
-        justify-content: space-between; /* Espalha itens */
+        justify-content: space-between;
+        /* Espalha itens */
     }
-     nav ul li {
+
+    nav ul li {
         margin-left: 0;
-        margin-right: 5px; /* Espaço menor entre itens */
+        margin-right: 5px;
+        /* Espaço menor entre itens */
     }
+
     .slogan {
         text-align: left;
         margin-top: 10px;
-        display: block; /* Mostra slogan */
+        display: block;
+        /* Mostra slogan */
     }
 
-    .hero { padding: 60px 15px; } /* Menos padding no hero */
-    .hero h1 { font-size: 2.2rem; }
-    .hero p { font-size: 1rem; }
+    .hero {
+        padding: 60px 15px;
+    }
+
+    /* Menos padding no hero */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 
     .product-cards {
         flex-direction: column;
         align-items: center;
     }
+
     .card {
         width: 90%;
         max-width: 400px;
     }
+
     .certification-cards {
-        grid-template-columns: 1fr; /* Uma coluna */
+        grid-template-columns: 1fr;
+        /* Uma coluna */
     }
 
-    .page-title h1 { font-size: 1.8rem; }
-    .contato-form form { padding: 25px; }
-    footer { padding: 20px 0; }
+    .page-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .contato-form form {
+        padding: 25px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
 }
 
 @media (max-width: 576px) {
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
 
     nav ul {
-        flex-wrap: wrap; /* Permite quebrar linha se necessário */
+        flex-wrap: wrap;
+        /* Permite quebrar linha se necessário */
         justify-content: flex-start;
     }
+
     nav ul li {
-        margin-bottom: 5px; /* Espaço se quebrar linha */
+        margin-bottom: 5px;
+        /* Espaço se quebrar linha */
         margin-right: 10px;
     }
+
     nav ul li a {
-        padding: 5px 8px; /* Menor padding no link */
+        padding: 5px 8px;
+        /* Menor padding no link */
         font-size: 0.9rem;
     }
 
-    .logo a { font-size: 1.3rem; }
-    .logo img { height: 30px; }
+    .logo a {
+        font-size: 1.3rem;
+    }
 
-    .hero { padding: 50px 15px; }
-    .hero h1 { font-size: 1.9rem; }
-    .hero p { font-size: 0.95rem; line-height: 1.6; }
+    .logo img {
+        height: 30px;
+    }
 
-    .page-title h1 { font-size: 1.6rem; }
+    .hero {
+        padding: 50px 15px;
+    }
 
-    .btn, .btn-comprar, button[type="submit"] {
-        padding: 10px 15px; /* Botões menores */
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .page-title h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn,
+    .btn-comprar,
+    button[type="submit"] {
+        padding: 10px 15px;
+        /* Botões menores */
         font-size: 0.9rem;
     }
-    .contato-form form { padding: 20px; }
-    .contato-form input, .contato-form textarea { padding: 10px; }
+
+    .contato-form form {
+        padding: 20px;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+        padding: 10px;
+    }
+
     .email {
-        font-size: 36px; 
+        font-size: 36px;
         font-style: italic;
     }
+
 }
 
 /* === MELHORIAS MODERNAS DE RESPONSIVIDADE (SAFE PATCH) === */
 
 /* Garante que imagens e vídeos não estourem os contêineres */
-img, video {
+img,
+video {
     max-width: 100%;
     height: auto;
 }
@@ -601,9 +752,11 @@ img, video {
 h1 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
+
 h2 {
     font-size: clamp(1.5rem, 3.5vw, 2rem);
 }
+
 h3 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
@@ -623,7 +776,8 @@ section {
 }
 
 /* Evita quebra feia em botões ou links grandes */
-a, button {
+a,
+button {
     word-break: break-word;
 }
 
@@ -640,6 +794,7 @@ body {
 
 /* Ajuste geral em colunas flex/grid para pequenas telas */
 @media (max-width: 480px) {
+
     .product-cards,
     .certification-cards {
         gap: 20px;
@@ -655,4 +810,62 @@ body {
     button[type="submit"] {
         width: 100%;
     }
+
+}
+
+/* ==== AJUSTES FINOS RESPONSIVOS ADICIONAIS (sem alteração visual) ==== */
+
+/* Centralização automática de imagens */
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Breakpoint extra para iPhones grandes */
+@media (max-width: 430px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .card,
+    .cert-card {
+        padding: 16px;
+    }
+
+    .btn,
+    .btn-comprar,
+    button[type="submit"] {
+        font-size: 0.85rem;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+
+}
+
+/* Breakpoint para telas muito grandes */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1280px;
+        padding: 0 30px;
+    }
+
+    .hero {
+        padding: 100px 80px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .card,
+    .cert-card {
+        max-width: 400px;
+    }
+
 }
