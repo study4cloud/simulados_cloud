@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   
       link.innerHTML = mensagem;
       // link.href = `https://wa.me/${phoneNumber}?text=${mensagemWhatsapp}`;
-      link.href = `https://bit.ly/4iojbyJ`;
+      link.href = `https://bit.ly/4jzPiwr${mensagemWhatsapp}`;
     });    
   });
 
