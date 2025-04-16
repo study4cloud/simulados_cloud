@@ -5,18 +5,18 @@
     /* Azul claro/médio - cor principal */
     --primary-blue-darker: #0051AD;
     /* Azul mais escuro para hover/ênfase */
-    --secondary-grey: #95a5a6;
+    --secondary-grey: #a5b0b0;
     /* Cinza médio para texto secundário/bordas suaves */
     --light-bg-accent: #ecf0f1;
     /* Cinza muito claro / quase branco azulado para fundos */
     --light-grey-border: #dce4e8;
     /* Borda um pouco mais visível que o fundo claro */
-    --dark-text-color: #2c3e50;
+    --dark-text-color: #233240;
     /* Cinza bem escuro / azul marinho para texto principal */
     --white-color: #ffffff;
-    --cta-color: #B7F6E8;
+    --cta-color: #0d6753;
     /* Verde-azulado (Turquesa/Teal) para CTAs principais */
-    --cta-darker: #083B33;
+    --cta-darker: #0A4C42;
     /* Versão mais escura do CTA para hover */
 
     /* Estilos Gerais */
