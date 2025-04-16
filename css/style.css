@@ -346,6 +346,16 @@ button[type="submit"] {
     transform: scale(1.03);
 }
 
+.btn-color {
+    background-color: #006BE6 ;
+    
+}
+
+.btn-color:hover {
+    background-color: #0558b7 ;
+    
+}
+
 /* Page Titles (AWS, Azure, Google, Contato) */
 .page-title {
     background-color: var(--primary-blue);
