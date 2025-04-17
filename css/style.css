@@ -757,6 +757,7 @@ img,
 video {
     max-width: 100%;
     height: auto;
+    width: auto;
 }
 
 /* Tipografia fluida para títulos */
